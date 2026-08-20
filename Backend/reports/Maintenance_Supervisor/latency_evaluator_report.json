@@ -1,0 +1,11 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "single_sample_benchmarks_count": 100,
+    "latency_p50_ms": 105.14,
+    "latency_p95_ms": 152.3468,
+    "latency_p99_ms": 167.1797,
+    "batch_sample_count": 7048,
+    "batch_throughput_samples_per_sec": 7966.34,
+    "duration_seconds": 12.9551
+}

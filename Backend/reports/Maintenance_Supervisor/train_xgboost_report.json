@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "model_name": "xgboost",
+    "model_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\models\\xgboost.joblib",
+    "train_samples": 28480,
+    "val_samples": 6462,
+    "features_count": 339,
+    "val_accuracy": 1.0,
+    "val_macro_f1": 1.0,
+    "val_log_loss": 3.9161,
+    "duration_seconds": 28.9747
+}

@@ -1,0 +1,13 @@
+{
+    "rows": 3,
+    "columns": 3,
+    "column_names": [
+        "engine_id",
+        "cycle",
+        "predicted_rul"
+    ],
+    "memory_bytes": 348,
+    "memory_megabytes": 0.000332,
+    "missing_values": 0,
+    "duplicate_rows": 0
+}

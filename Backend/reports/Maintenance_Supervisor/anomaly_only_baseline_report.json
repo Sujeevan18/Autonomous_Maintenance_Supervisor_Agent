@@ -1,0 +1,14 @@
+{
+    "status": "success",
+    "baseline_name": "anomaly_only_baseline",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "total_samples": 7048,
+    "predictions_distribution": {
+        "continue_operation": 4647,
+        "monitor_closely": 479,
+        "schedule_inspection": 401,
+        "immediate_maintenance": 1521
+    },
+    "accuracy": 0.7321,
+    "duration_seconds": 0.7104
+}

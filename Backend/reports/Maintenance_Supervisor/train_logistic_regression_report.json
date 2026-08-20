@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "model_name": "logistic_regression",
+    "model_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\models\\logistic_regression.joblib",
+    "train_samples": 28480,
+    "val_samples": 6462,
+    "features_count": 339,
+    "val_accuracy": 0.3391,
+    "val_macro_f1": 0.26,
+    "val_log_loss": 1.8988,
+    "duration_seconds": 27.4593
+}

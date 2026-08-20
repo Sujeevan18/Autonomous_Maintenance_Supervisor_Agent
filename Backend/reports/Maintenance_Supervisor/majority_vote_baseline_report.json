@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "baseline_name": "majority_vote_baseline",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "majority_class": "continue_operation",
+    "total_samples": 7048,
+    "predictions_distribution": {
+        "continue_operation": 7048
+    },
+    "accuracy": 0.5563,
+    "duration_seconds": 0.5492
+}

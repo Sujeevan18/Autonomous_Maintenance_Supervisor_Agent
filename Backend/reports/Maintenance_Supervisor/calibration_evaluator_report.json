@@ -1,0 +1,7 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "total_samples": 7048,
+    "expected_calibration_error": 0.0024,
+    "duration_seconds": 0.8811
+}

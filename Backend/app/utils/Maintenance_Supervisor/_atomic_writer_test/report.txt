@@ -1,0 +1,2 @@
+Atomic writer self-test completed successfully.
+All related files were written in one transaction.

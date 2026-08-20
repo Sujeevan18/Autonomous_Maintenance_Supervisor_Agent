@@ -1,0 +1,10 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "samples_evaluated": 7048,
+    "mean_confidence": 0.6178,
+    "high_confidence_count": 0,
+    "medium_confidence_count": 774,
+    "low_confidence_count": 6274,
+    "duration_seconds": 0.5277
+}

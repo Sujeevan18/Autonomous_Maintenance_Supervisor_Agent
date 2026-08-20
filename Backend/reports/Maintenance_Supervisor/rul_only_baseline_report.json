@@ -1,0 +1,11 @@
+{
+    "status": "success",
+    "baseline_name": "rul_only_baseline",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "total_samples": 7048,
+    "predictions_distribution": {
+        "immediate_maintenance": 7048
+    },
+    "accuracy": 0.1415,
+    "duration_seconds": 0.7101
+}

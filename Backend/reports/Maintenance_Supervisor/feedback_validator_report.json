@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "valid_sample_test": {
+        "is_valid": true,
+        "message": "Valid"
+    },
+    "invalid_sample_test": {
+        "is_valid": false,
+        "message": "Invalid engineer decision class 'invalid_action_class'."
+    },
+    "duration_seconds": 0.0
+}

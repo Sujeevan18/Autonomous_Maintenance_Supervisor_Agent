@@ -1,0 +1,13 @@
+{
+    "status": "success",
+    "feedback_analyzed_count": 1,
+    "override_counts": {
+        "schedule_maintenance": 1
+    },
+    "adapted_policy": {
+        "immediate_rul_threshold_adjusted": 10.0,
+        "critical_risk_10_threshold_adjusted": 0.82,
+        "policy_version": "v1.1-adapted"
+    },
+    "duration_seconds": 0.0082
+}

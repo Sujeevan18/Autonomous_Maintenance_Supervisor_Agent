@@ -1,0 +1,14 @@
+{
+    "status": "success",
+    "store_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\artifacts\\Maintenance_Supervisor\\feedback_store.jsonl",
+    "total_feedback_entries": 1,
+    "latest_logged_entry": {
+        "sample_id": "ENG_101_CYCLE_150",
+        "original_decision": "schedule_maintenance",
+        "engineer_decision": "immediate_maintenance",
+        "engineer_id": "CHIEF_ENG_ALPHA",
+        "comments": "Vibration harmonics indicate immediate bearing failure imminent.",
+        "timestamp": 1785499591.1516137
+    },
+    "duration_seconds": 0.0066
+}

@@ -1,0 +1,25 @@
+{
+    "champion_model_name": "random_forest",
+    "champion_model_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\models\\random_forest.joblib",
+    "val_macro_f1": 1.0,
+    "val_accuracy": 1.0,
+    "val_log_loss": 13.4587,
+    "selection_metric": "val_macro_f1",
+    "all_candidates": [
+        {
+            "name": "random_forest",
+            "val_macro_f1": 1.0,
+            "val_accuracy": 1.0
+        },
+        {
+            "name": "xgboost",
+            "val_macro_f1": 1.0,
+            "val_accuracy": 1.0
+        },
+        {
+            "name": "logistic_regression",
+            "val_macro_f1": 0.26,
+            "val_accuracy": 0.3391
+        }
+    ]
+}

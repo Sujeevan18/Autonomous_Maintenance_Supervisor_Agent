@@ -1,0 +1,8 @@
+severity,check_name,column,row_index,value,message
+warning,inconsistent_uncertainty_width,uncertainty_width,,16348.0,16348 rows have uncertainty_width different from upper_bound - lower_bound.
+info,constant_column,schema_version,,,Column 'schema_version' has no meaningful variation.
+warning,constant_column,threshold_10,,,Column 'threshold_10' has no meaningful variation.
+warning,constant_column,threshold_30,,,Column 'threshold_30' has no meaningful variation.
+warning,constant_column,threshold_50,,,Column 'threshold_50' has no meaningful variation.
+warning,constant_column,anomaly_threshold,,,Column 'anomaly_threshold' has no meaningful variation.
+warning,constant_column,anomaly_model_used,,,Column 'anomaly_model_used' has no meaningful variation.

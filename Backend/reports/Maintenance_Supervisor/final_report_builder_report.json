@@ -1,0 +1,64 @@
+{
+    "status": "success",
+    "cost_evaluation": {
+        "status": "success",
+        "test_records_evaluated": 5521,
+        "cost_savings_vs_tbo_usd": 215853500.0,
+        "cost_reduction_percentage": 94.99,
+        "evaluations": {
+            "champion_supervisor_agent": {
+                "total_cost_usd": 11392500.0,
+                "mean_cost_per_cycle_usd": 2063.48,
+                "missed_critical_events": 0,
+                "false_critical_alarms": 0,
+                "timely_maintenance_events": 881,
+                "inspections_performed": 547
+            },
+            "time_between_overhaul_baseline": {
+                "total_cost_usd": 227246000.0,
+                "mean_cost_per_cycle_usd": 41160.3,
+                "missed_critical_events": 443,
+                "false_critical_alarms": 14,
+                "timely_maintenance_events": 438,
+                "inspections_performed": 0
+            },
+            "majority_vote_baseline": {
+                "total_cost_usd": 440500000.0,
+                "mean_cost_per_cycle_usd": 79786.27,
+                "missed_critical_events": 881,
+                "false_critical_alarms": 0,
+                "timely_maintenance_events": 0,
+                "inspections_performed": 0
+            }
+        },
+        "cost_matrix_usd": {
+            "catastrophic_failure_fn": 500000.0,
+            "premature_overhaul_fp": 35000.0,
+            "preventive_maintenance_tp": 12000.0,
+            "routine_inspection": 1500.0
+        },
+        "duration_seconds": 0.4203
+    },
+    "conformal_prediction": {
+        "status": "success",
+        "target_coverage": 0.95,
+        "empirical_test_coverage": 0.962,
+        "calibrated_q_alpha_cycles": 5.2,
+        "total_test_samples": 5521,
+        "manifest_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\conformal_rul_bounds.json",
+        "duration_seconds": 0.8949
+    },
+    "counterfactual_scenario": {
+        "original_rul": 24.0,
+        "original_risk": 0.89,
+        "original_decision": "schedule_maintenance",
+        "target_decision": "schedule_inspection",
+        "hpc_pressure_reduction_pct": 4.2,
+        "cruise_thrust_reduction_pct": 3.0,
+        "extended_rul_cycles": 38.0,
+        "reduced_risk": 0.48,
+        "actionable_statement": "If flight operations reduce HPC cruise pressure by 4.2% (thrust adjustment -3.0%), predicted RUL increases from 24.0 to 38.0 cycles (30-day failure risk drops from 89% to 48%), allowing maintenance to be safely rescheduled from schedule maintenance to schedule inspection."
+    },
+    "final_report_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\FINAL_SUPERVISOR_RESEARCH_REPORT.md",
+    "duration_seconds": 1.3548
+}

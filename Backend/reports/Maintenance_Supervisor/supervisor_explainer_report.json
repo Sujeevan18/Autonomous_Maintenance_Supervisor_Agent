@@ -1,0 +1,92 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "sample_explanations": [
+        {
+            "sample_index": 0,
+            "decision": "continue_operation",
+            "narrative": "NORMAL OPERATION: All upstream health, RUL, and failure risk metrics remain within nominal operating thresholds. Predicted RUL: 1.4 cycles.",
+            "upstream_contributions": {
+                "rul_contribution_pct": 158.07,
+                "risk_contribution_pct": 35.93,
+                "anomaly_contribution_pct": -94.0
+            },
+            "top_attributions": {
+                "isolation_forest_score_pct_change_1": 38035610.0,
+                "anomaly_score_pct_change_1": 17709850.0,
+                "mahalanobis_score_pct_change_1": 3776107.2,
+                "context_confidence_roll_max_10": 6.98336,
+                "context_confidence_roll_max_5": 3.5544672
+            }
+        },
+        {
+            "sample_index": 1,
+            "decision": "continue_operation",
+            "narrative": "NORMAL OPERATION: All upstream health, RUL, and failure risk metrics remain within nominal operating thresholds. Predicted RUL: 1.5 cycles.",
+            "upstream_contributions": {
+                "rul_contribution_pct": 202.03,
+                "risk_contribution_pct": -31.9,
+                "anomaly_contribution_pct": -70.14
+            },
+            "top_attributions": {
+                "isolation_forest_score_pct_change_1": 38035610.0,
+                "anomaly_score_pct_change_1": 17709850.0,
+                "mahalanobis_score_pct_change_1": 3776107.2,
+                "context_confidence_roll_max_10": 6.98336,
+                "context_confidence_roll_max_5": 3.5544672
+            }
+        },
+        {
+            "sample_index": 2,
+            "decision": "continue_operation",
+            "narrative": "NORMAL OPERATION: All upstream health, RUL, and failure risk metrics remain within nominal operating thresholds. Predicted RUL: 1.4 cycles.",
+            "upstream_contributions": {
+                "rul_contribution_pct": 354.1,
+                "risk_contribution_pct": -170.72,
+                "anomaly_contribution_pct": -83.38
+            },
+            "top_attributions": {
+                "mahalanobis_score_pct_change_1": 8.073036,
+                "residual_anomaly_score_pct_change_1": 2.2839403,
+                "context_confidence_roll_max_10": 2.0815334,
+                "uncertainty_width_pct_change_1": 1.914212,
+                "uncertainty_width_roll_max_10": 1.7369938
+            }
+        },
+        {
+            "sample_index": 3,
+            "decision": "continue_operation",
+            "narrative": "NORMAL OPERATION: All upstream health, RUL, and failure risk metrics remain within nominal operating thresholds. Predicted RUL: 1.4 cycles.",
+            "upstream_contributions": {
+                "rul_contribution_pct": 285.27,
+                "risk_contribution_pct": -105.39,
+                "anomaly_contribution_pct": -79.88
+            },
+            "top_attributions": {
+                "risk_10_pct_change_1": 512552.84,
+                "risk_50_pct_change_1": 2.3400753,
+                "anomaly_score_range": 2.306436,
+                "context_confidence_roll_max_10": 2.0815334,
+                "anomaly_model_disagreement": 2.0381494
+            }
+        },
+        {
+            "sample_index": 4,
+            "decision": "continue_operation",
+            "narrative": "NORMAL OPERATION: All upstream health, RUL, and failure risk metrics remain within nominal operating thresholds. Predicted RUL: 1.5 cycles.",
+            "upstream_contributions": {
+                "rul_contribution_pct": 80.35,
+                "risk_contribution_pct": 39.2,
+                "anomaly_contribution_pct": -19.55
+            },
+            "top_attributions": {
+                "residual_anomaly_score_pct_change_1": 24838790.0,
+                "risk_10_pct_change_1": 4.7227483,
+                "risk_30_pct_change_1": 2.3893425,
+                "control_risk_pct_change_1": 2.3893425,
+                "risk_50_pct_change_1": 2.2925944
+            }
+        }
+    ],
+    "duration_seconds": 0.3377
+}

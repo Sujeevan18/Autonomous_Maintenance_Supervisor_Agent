@@ -1,0 +1,59 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "total_samples": 7048,
+    "metrics": {
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "false_critical_rate": 0.0,
+        "missed_critical_rate": 0.0,
+        "total_cost_penalty": 0.0,
+        "per_class_f1": {
+            "continue_operation": 0.0,
+            "monitor_closely": 0.0,
+            "schedule_inspection": 0.0,
+            "schedule_maintenance": 0.0,
+            "immediate_maintenance": 1.0
+        },
+        "confusion_matrix": [
+            [
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                7048
+            ]
+        ]
+    },
+    "duration_seconds": 1.2086
+}

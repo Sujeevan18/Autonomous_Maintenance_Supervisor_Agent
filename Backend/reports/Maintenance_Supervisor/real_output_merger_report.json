@@ -1,0 +1,9 @@
+{
+    "status": "success",
+    "output_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\data\\Maintenance_Supervisor\\Maintenance_Supervisor\\integrated\\supervisor_integrated_input.csv",
+    "total_rows": 40463,
+    "total_columns": 48,
+    "validation_errors": 0,
+    "validation_warnings": 0,
+    "duration_seconds": 1.6662
+}

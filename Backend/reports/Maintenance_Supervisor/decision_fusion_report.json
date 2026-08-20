@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "total_samples": 7048,
+    "overrides_applied": 6051,
+    "human_reviews_required": 6759,
+    "mean_confidence": 0.7609,
+    "decisions_distribution": {
+        "immediate_maintenance": 7048
+    },
+    "duration_seconds": 1.5016
+}

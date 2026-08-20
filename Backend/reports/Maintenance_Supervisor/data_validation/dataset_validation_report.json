@@ -1,0 +1,842 @@
+{
+  "status": "valid",
+  "is_valid": true,
+  "component": "Maintenance_Supervisor",
+  "stage": "data_validation",
+  "started_at_utc": "2026-07-31T05:06:26.057556+00:00",
+  "finished_at_utc": "2026-07-31T05:06:28.113310+00:00",
+  "duration_seconds": 2.055789,
+  "input": {
+    "path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\data\\Maintenance_Supervisor\\sample\\supervisor_sample_dataset.csv",
+    "size_bytes": 21058533,
+    "sha256": "2b5bcddbed1844f03b1e53f0867bda4b22a1892a9ac32b5d34a558f1da692a93",
+    "rows": 50000,
+    "columns": 54,
+    "memory_mb": 53.0741
+  },
+  "outputs": {
+    "report_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\reports\\Maintenance_Supervisor\\data_validation\\dataset_validation_report.json",
+    "issues_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\reports\\Maintenance_Supervisor\\data_validation\\dataset_validation_issues.csv"
+  },
+  "configuration": {
+    "strict_validation": false,
+    "target_column": "final_decision",
+    "unique_key_columns": [
+      "engine_id",
+      "fd_subset",
+      "cycle"
+    ],
+    "decision_classes": [
+      "continue_operation",
+      "monitor_closely",
+      "schedule_inspection",
+      "schedule_maintenance",
+      "immediate_maintenance"
+    ],
+    "maximum_issue_rows": 10000
+  },
+  "schema": {
+    "original_columns": [
+      "schema_version",
+      "engine_id",
+      "fd_subset",
+      "cycle",
+      "predicted_rul",
+      "lower_bound",
+      "upper_bound",
+      "uncertainty_width",
+      "lifecycle_state",
+      "degradation_speed",
+      "degradation_acceleration",
+      "confidence_collapse_flag",
+      "sudden_health_drop_flag",
+      "instability_flag",
+      "rul_model_used",
+      "risk_10",
+      "risk_30",
+      "risk_50",
+      "uncertainty_10",
+      "uncertainty_30",
+      "uncertainty_50",
+      "threshold_10",
+      "threshold_30",
+      "threshold_50",
+      "predicted_fail_in_10",
+      "predicted_fail_in_30",
+      "predicted_fail_in_50",
+      "control_risk",
+      "risk_velocity",
+      "risk_acceleration",
+      "risk_state",
+      "action_hint_for_supervisor",
+      "risk_model_used",
+      "anomaly_score",
+      "anomaly_threshold",
+      "is_anomalous",
+      "anomaly_severity",
+      "residual_anomaly_score",
+      "isolation_forest_score",
+      "mahalanobis_score",
+      "context_drift_flag",
+      "top_sensor_1",
+      "top_sensor_1_score",
+      "top_sensor_2",
+      "top_sensor_2_score",
+      "top_sensor_3",
+      "top_sensor_3_score",
+      "context_confidence",
+      "anomaly_model_used",
+      "final_decision",
+      "priority",
+      "maintenance_urgency",
+      "requires_human_review",
+      "supervisor_score"
+    ],
+    "normalized_columns": [
+      "schema_version",
+      "engine_id",
+      "fd_subset",
+      "cycle",
+      "predicted_rul",
+      "lower_bound",
+      "upper_bound",
+      "uncertainty_width",
+      "lifecycle_state",
+      "degradation_speed",
+      "degradation_acceleration",
+      "confidence_collapse_flag",
+      "sudden_health_drop_flag",
+      "instability_flag",
+      "rul_model_used",
+      "risk_10",
+      "risk_30",
+      "risk_50",
+      "uncertainty_10",
+      "uncertainty_30",
+      "uncertainty_50",
+      "threshold_10",
+      "threshold_30",
+      "threshold_50",
+      "predicted_fail_in_10",
+      "predicted_fail_in_30",
+      "predicted_fail_in_50",
+      "control_risk",
+      "risk_velocity",
+      "risk_acceleration",
+      "risk_state",
+      "action_hint_for_supervisor",
+      "risk_model_used",
+      "anomaly_score",
+      "anomaly_threshold",
+      "is_anomalous",
+      "anomaly_severity",
+      "residual_anomaly_score",
+      "isolation_forest_score",
+      "mahalanobis_score",
+      "context_drift_flag",
+      "top_sensor_1",
+      "top_sensor_1_score",
+      "top_sensor_2",
+      "top_sensor_2_score",
+      "top_sensor_3",
+      "top_sensor_3_score",
+      "context_confidence",
+      "anomaly_model_used",
+      "final_decision",
+      "priority",
+      "maintenance_urgency",
+      "requires_human_review",
+      "supervisor_score"
+    ],
+    "column_renames": {}
+  },
+  "summary": {
+    "rows": 50000,
+    "columns": 54,
+    "missing_required_columns": [],
+    "missing_configured_columns": [],
+    "unexpected_columns": [],
+    "duplicate_rows": 0,
+    "duplicate_key_rows": 0,
+    "missing_key_rows": 0,
+    "missing_target_rows": 0,
+    "invalid_target_rows": 0,
+    "missing_values_by_column": {},
+    "infinite_values_by_column": {},
+    "invalid_numeric_values_by_column": {},
+    "invalid_boolean_values_by_column": {},
+    "invalid_probability_values_by_column": {},
+    "negative_values_by_column": {},
+    "invalid_cycle_rows": 0,
+    "invalid_rul_bound_rows": 0,
+    "inconsistent_uncertainty_rows": 16348,
+    "risk_monotonicity_violations": 0,
+    "possible_leakage_columns": [],
+    "constant_columns": [
+      "schema_version",
+      "threshold_10",
+      "threshold_30",
+      "threshold_50",
+      "anomaly_threshold",
+      "anomaly_model_used"
+    ],
+    "error_count": 0,
+    "warning_count": 6,
+    "info_count": 1
+  },
+  "target_distribution": {
+    "continue_operation": 29205,
+    "immediate_maintenance": 6332,
+    "monitor_closely": 8249,
+    "schedule_inspection": 4017,
+    "schedule_maintenance": 2197
+  },
+  "numeric_summary": {
+    "predicted_rul": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 301.03,
+      "mean": 112.20171901999998,
+      "median": 108.04650000000001,
+      "standard_deviation": 69.95301596933969
+    },
+    "lower_bound": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 283.973,
+      "mean": 98.01031056,
+      "median": 92.75450000000001,
+      "standard_deviation": 71.68312975849807
+    },
+    "upper_bound": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 16.671,
+      "maximum": 318.861,
+      "mean": 127.64837626,
+      "median": 123.2875,
+      "standard_deviation": 66.51144263036296
+    },
+    "uncertainty_width": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 8.673,
+      "maximum": 68.24,
+      "mean": 30.893313140000004,
+      "median": 30.8525,
+      "standard_deviation": 9.103814381965911
+    },
+    "degradation_speed": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 2.18778,
+      "mean": 0.7455746409999999,
+      "median": 0.598725,
+      "standard_deviation": 0.5471058761873667
+    },
+    "degradation_acceleration": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": -0.05,
+      "maximum": 0.27445,
+      "mean": 0.0705616308,
+      "median": 0.04622,
+      "standard_deviation": 0.06467676461615961
+    },
+    "risk_10": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 0.998018,
+      "mean": 0.09921652190000001,
+      "median": 0.0356245,
+      "standard_deviation": 0.19559256342722747
+    },
+    "risk_30": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.02001,
+      "maximum": 1.0,
+      "mean": 0.24011391342,
+      "median": 0.1170345,
+      "standard_deviation": 0.2799265974281303
+    },
+    "risk_50": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.041307,
+      "maximum": 1.0,
+      "mean": 0.36690389254,
+      "median": 0.2091875,
+      "standard_deviation": 0.3082410374426021
+    },
+    "uncertainty_10": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.020023,
+      "maximum": 0.189322,
+      "mean": 0.08852899696000001,
+      "median": 0.08834700000000001,
+      "standard_deviation": 0.02310364705938912
+    },
+    "uncertainty_30": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.031723,
+      "maximum": 0.226428,
+      "mean": 0.11085712872,
+      "median": 0.1105745,
+      "standard_deviation": 0.027197889809809018
+    },
+    "uncertainty_50": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.024117,
+      "maximum": 0.264465,
+      "mean": 0.13469235379999997,
+      "median": 0.13427850000000002,
+      "standard_deviation": 0.031690077844917675
+    },
+    "threshold_10": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.5,
+      "maximum": 0.5,
+      "mean": 0.5,
+      "median": 0.5,
+      "standard_deviation": 0.0
+    },
+    "threshold_30": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.5,
+      "maximum": 0.5,
+      "mean": 0.5,
+      "median": 0.5,
+      "standard_deviation": 0.0
+    },
+    "threshold_50": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.5,
+      "maximum": 0.5,
+      "mean": 0.5,
+      "median": 0.5,
+      "standard_deviation": 0.0
+    },
+    "control_risk": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.02001,
+      "maximum": 1.0,
+      "mean": 0.24011391342,
+      "median": 0.1170345,
+      "standard_deviation": 0.2799265974281303
+    },
+    "risk_velocity": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": -0.15,
+      "maximum": 0.2,
+      "mean": 0.0045280478200000005,
+      "median": 0.001151,
+      "standard_deviation": 0.06891448200612943
+    },
+    "risk_acceleration": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": -0.1,
+      "maximum": 0.12,
+      "mean": 0.003194617639999999,
+      "median": 1.6e-05,
+      "standard_deviation": 0.0753984851238648
+    },
+    "anomaly_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.28478291153999996,
+      "median": 0.205166,
+      "standard_deviation": 0.2358578443341699
+    },
+    "anomaly_threshold": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.6,
+      "maximum": 0.6,
+      "mean": 0.5999999999999999,
+      "median": 0.6,
+      "standard_deviation": 1.110234127021939e-16
+    },
+    "residual_anomaly_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.2866142534,
+      "median": 0.21394449999999998,
+      "standard_deviation": 0.23869785718935008
+    },
+    "isolation_forest_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.28740608780000004,
+      "median": 0.220163,
+      "standard_deviation": 0.23968017096593439
+    },
+    "mahalanobis_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.28616465024,
+      "median": 0.21540900000000002,
+      "standard_deviation": 0.23807721291031236
+    },
+    "top_sensor_1_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.37806049214,
+      "median": 0.3150995,
+      "standard_deviation": 0.24559764563731426
+    },
+    "top_sensor_2_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.28993829348,
+      "median": 0.219877,
+      "standard_deviation": 0.24083177994717625
+    },
+    "top_sensor_3_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.20901980186000002,
+      "median": 0.1268925,
+      "standard_deviation": 0.2265632542600904
+    },
+    "context_confidence": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.291519,
+      "maximum": 0.969999,
+      "mean": 0.9093550312199999,
+      "median": 0.917798,
+      "standard_deviation": 0.06212830744968462
+    },
+    "cycle": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 1.0,
+      "maximum": 283.0,
+      "mean": 113.5598,
+      "median": 110.0,
+      "standard_deviation": 69.26578389750873
+    },
+    "supervisor_score": {
+      "count": 50000,
+      "missing": 0,
+      "minimum": 0.016088,
+      "maximum": 0.994593,
+      "mean": 0.28229099308,
+      "median": 0.158449,
+      "standard_deviation": 0.26543330946910276
+    }
+  },
+  "column_profiles": [
+    {
+      "name": "schema_version",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 1
+    },
+    {
+      "name": "engine_id",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 229
+    },
+    {
+      "name": "fd_subset",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 4
+    },
+    {
+      "name": "cycle",
+      "dtype": "int64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 283
+    },
+    {
+      "name": "predicted_rul",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 44352
+    },
+    {
+      "name": "lower_bound",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 41014
+    },
+    {
+      "name": "upper_bound",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 44940
+    },
+    {
+      "name": "uncertainty_width",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 26670
+    },
+    {
+      "name": "lifecycle_state",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 4
+    },
+    {
+      "name": "degradation_speed",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 42463
+    },
+    {
+      "name": "degradation_acceleration",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 19322
+    },
+    {
+      "name": "confidence_collapse_flag",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "sudden_health_drop_flag",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "instability_flag",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "rul_model_used",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 3
+    },
+    {
+      "name": "risk_10",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 35939
+    },
+    {
+      "name": "risk_30",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 43323
+    },
+    {
+      "name": "risk_50",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 42544
+    },
+    {
+      "name": "uncertainty_10",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 37868
+    },
+    {
+      "name": "uncertainty_30",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 39457
+    },
+    {
+      "name": "uncertainty_50",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 40757
+    },
+    {
+      "name": "threshold_10",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 1
+    },
+    {
+      "name": "threshold_30",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 1
+    },
+    {
+      "name": "threshold_50",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 1
+    },
+    {
+      "name": "predicted_fail_in_10",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "predicted_fail_in_30",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "predicted_fail_in_50",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "control_risk",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 43323
+    },
+    {
+      "name": "risk_velocity",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 41724
+    },
+    {
+      "name": "risk_acceleration",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 32837
+    },
+    {
+      "name": "risk_state",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 4
+    },
+    {
+      "name": "action_hint_for_supervisor",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 5
+    },
+    {
+      "name": "risk_model_used",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 3
+    },
+    {
+      "name": "anomaly_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 45948
+    },
+    {
+      "name": "anomaly_threshold",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 1
+    },
+    {
+      "name": "is_anomalous",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "anomaly_severity",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 4
+    },
+    {
+      "name": "residual_anomaly_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 45301
+    },
+    {
+      "name": "isolation_forest_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 44565
+    },
+    {
+      "name": "mahalanobis_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 44847
+    },
+    {
+      "name": "context_drift_flag",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "top_sensor_1",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 13
+    },
+    {
+      "name": "top_sensor_1_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 47421
+    },
+    {
+      "name": "top_sensor_2",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 13
+    },
+    {
+      "name": "top_sensor_2_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 44830
+    },
+    {
+      "name": "top_sensor_3",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 13
+    },
+    {
+      "name": "top_sensor_3_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 36291
+    },
+    {
+      "name": "context_confidence",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 40122
+    },
+    {
+      "name": "anomaly_model_used",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 1
+    },
+    {
+      "name": "final_decision",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 5
+    },
+    {
+      "name": "priority",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 4
+    },
+    {
+      "name": "maintenance_urgency",
+      "dtype": "object",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 5
+    },
+    {
+      "name": "requires_human_review",
+      "dtype": "bool",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 2
+    },
+    {
+      "name": "supervisor_score",
+      "dtype": "float64",
+      "missing_count": 0,
+      "non_missing_count": 50000,
+      "unique_count": 46860
+    }
+  ],
+  "issue_storage": {
+    "total_issue_messages": 7,
+    "stored_issue_rows": 7,
+    "storage_limit": 10000
+  }
+}

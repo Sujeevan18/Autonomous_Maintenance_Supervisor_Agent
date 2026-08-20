@@ -1,0 +1,21 @@
+{
+    "status": "success",
+    "events_streamed": 10,
+    "sample_event_output": {
+        "engine_id": "ENG_001",
+        "cycle": 150,
+        "final_decision": "continue_operation",
+        "priority": "Low",
+        "maintenance_urgency": "none",
+        "recommended_action": "Continue normal operation and routine monitoring.",
+        "confidence_score": 0.3466666666666667,
+        "confidence_level": "low",
+        "entropy_score": 0.867542020226645,
+        "conflict_score": 0.7934733769950949,
+        "requires_human_review": true,
+        "review_reasons": "Low Confidence; High Uncertainty; Agent Conflict",
+        "override_applied": false,
+        "override_reason": "None"
+    },
+    "duration_seconds": 2.3207
+}

@@ -1,0 +1,7 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "output_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\artifacts\\Maintenance_Supervisor\\batch_processed_decisions.csv",
+    "total_records_processed": 7048,
+    "duration_seconds": 5.4083
+}

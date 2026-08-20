@@ -1,0 +1,5 @@
+{
+    "immediate_rul_threshold_adjusted": 10.0,
+    "critical_risk_10_threshold_adjusted": 0.82,
+    "policy_version": "v1.1-adapted"
+}

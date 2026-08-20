@@ -1,0 +1,9 @@
+{
+    "status": "success",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "samples_evaluated": 7048,
+    "mean_agreement": 0.329,
+    "mean_conflict": 0.671,
+    "high_conflict_count": 5482,
+    "duration_seconds": 0.5339
+}

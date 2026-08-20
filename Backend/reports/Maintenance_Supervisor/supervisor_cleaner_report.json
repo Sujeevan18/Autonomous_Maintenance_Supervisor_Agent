@@ -1,0 +1,12 @@
+{
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\data\\Maintenance_Supervisor\\sample\\supervisor_sample_dataset.csv",
+    "output_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\processed\\Maintenance_Supervisor\\supervisor_sanitized_input.csv",
+    "initial_rows": 40463,
+    "final_rows": 40463,
+    "rows_dropped": 0,
+    "nulls_imputed": 0,
+    "outliers_clipped": 0,
+    "invalid_cycles_removed": 0,
+    "duration_seconds": 0.483,
+    "status": "success"
+}

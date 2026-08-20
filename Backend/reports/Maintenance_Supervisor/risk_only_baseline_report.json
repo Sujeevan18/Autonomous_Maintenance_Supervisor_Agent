@@ -1,0 +1,15 @@
+{
+    "status": "success",
+    "baseline_name": "risk_only_baseline",
+    "input_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\RP\\Aircraft_Predictive_Maintainance_System\\Backend\\processed\\Maintenance_Supervisor\\splits\\test.csv",
+    "total_samples": 7048,
+    "predictions_distribution": {
+        "continue_operation": 4671,
+        "immediate_maintenance": 1461,
+        "schedule_inspection": 93,
+        "monitor_closely": 311,
+        "schedule_maintenance": 512
+    },
+    "accuracy": 0.7435,
+    "duration_seconds": 0.7203
+}
