@@ -56,8 +56,34 @@ if HAS_FASTAPI:
         except Exception as exc:
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(exc))
 
+    @router.post("/explain")
+    def explain_supervisor_decision(telemetry: TelemetryInputSchema):
+        try:
+            from app.services.Maintenance_Supervisor.explanation.supervisor_explainer import SupervisorExplainer
+            import pandas as pd
+            explainer = SupervisorExplainer()
+            row = pd.Series(telemetry.dict())
+            res = explainer.explain_sample(row, decision=telemetry.dict().get("final_decision", "immediate_maintenance"))
+            return {
+                "decision": res.decision,
+                "explanation_narrative": res.explanation_narrative,
+                "upstream_contributions": res.upstream_contributions,
+                "top_attributions": res.top_feature_attributions,
+            }
+        except Exception as exc:
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(exc))
+
+    @router.post("/federated/aggregate")
+    def run_federated_aggregation():
+        try:
+            from app.services.Maintenance_Supervisor.federated.federated_supervisor import run_federated_simulation
+            return run_federated_simulation()
+        except Exception as exc:
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(exc))
+
     @router.get("/health")
     def health_check():
-        return {"status": "healthy", "service": "Maintenance Supervisor Agent", "version": "1.0.0"}
+        return {"status": "healthy", "service": "Autonomous Maintenance Supervisor Agent", "version": "2.1.0"}
 else:
     router = None
+

@@ -33,6 +33,8 @@ from app.services.Maintenance_Supervisor.models.logistic_regression_supervisor i
 from app.services.Maintenance_Supervisor.models.random_forest_supervisor import RandomForestSupervisorModel
 from app.services.Maintenance_Supervisor.models.xgboost_supervisor import XGBoostSupervisorModel
 from app.services.Maintenance_Supervisor.models.lightgbm_supervisor import LightGBMSupervisorModel
+from app.services.Maintenance_Supervisor.models.ppo_supervisor import PPOSupervisorModel
+from app.services.Maintenance_Supervisor.models.dqn_supervisor import DQNSupervisorModel
 from app.utils.Maintenance_Supervisor.logger import get_logger
 
 logger = get_logger()
@@ -42,6 +44,8 @@ _MODEL_MAP: Final[dict[str, Type[BaseSupervisorModel]]] = {
     "random_forest": RandomForestSupervisorModel,
     "xgboost": XGBoostSupervisorModel,
     "lightgbm": LightGBMSupervisorModel,
+    "ppo": PPOSupervisorModel,
+    "dqn": DQNSupervisorModel,
 }
 
 
@@ -73,12 +77,16 @@ def load_model(filepath: Path | str) -> BaseSupervisorModel:
     if not filepath.exists():
         raise FileNotFoundError(f"Model artifact not found: {filepath}")
 
-    # Temporary instance to call load
-    # We can inspect the file or load with base model
     import joblib
-    state = joblib.load(filepath)
-    model_name = state.get("model_name", "random_forest")
+    import torch
 
+    try:
+        state = joblib.load(filepath)
+    except Exception:
+        state = torch.load(filepath, map_location="cpu")
+
+    model_name = state.get("model_name", "random_forest")
     model_instance = create_model(model_name)
     model_instance.load(filepath)
     return model_instance
+

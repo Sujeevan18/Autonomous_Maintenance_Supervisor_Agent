@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "model_name": "ppo",
+    "model_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\models\\ppo.joblib",
+    "train_samples": 28480,
+    "val_samples": 6462,
+    "features_count": 339,
+    "val_accuracy": 0.0627,
+    "val_macro_f1": 0.1076,
+    "val_log_loss": 3.0159,
+    "duration_seconds": 15.1828
+}

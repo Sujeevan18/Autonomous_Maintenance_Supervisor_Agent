@@ -55,6 +55,8 @@ from app.services.Maintenance_Supervisor.training.train_logistic_regression impo
 from app.services.Maintenance_Supervisor.training.train_random_forest import train_random_forest
 from app.services.Maintenance_Supervisor.training.train_xgboost import train_xgboost
 from app.services.Maintenance_Supervisor.training.train_lightgbm import train_lightgbm
+from app.services.Maintenance_Supervisor.training.train_ppo import train_ppo
+from app.services.Maintenance_Supervisor.training.train_dqn import train_dqn
 from app.utils.Maintenance_Supervisor.logger import get_logger, section
 from app.utils.Maintenance_Supervisor.atomic_writer import atomic_write_json
 
@@ -99,8 +101,25 @@ def run_master_training_pipeline() -> dict:
     except Exception as exc:
         logger.error("LightGBM training failed: %s", exc)
 
+    # 5. Train PPO Reinforcement Learning Agent
+    try:
+        ppo_res = train_ppo()
+        if ppo_res.get("status") == "success":
+            results.append(ppo_res)
+    except Exception as exc:
+        logger.error("PPO training failed: %s", exc)
+
+    # 6. Train DQN Reinforcement Learning Agent
+    try:
+        dqn_res = train_dqn()
+        if dqn_res.get("status") == "success":
+            results.append(dqn_res)
+    except Exception as exc:
+        logger.error("DQN training failed: %s", exc)
+
     if not results:
         raise RuntimeError("All model training runs failed.")
+
 
     # Select Champion Model based on val_macro_f1
     valid_results = [r for r in results if r.get("status") == "success" and r.get("val_macro_f1") is not None]

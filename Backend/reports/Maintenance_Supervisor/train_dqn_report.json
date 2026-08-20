@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "model_name": "dqn",
+    "model_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\models\\dqn.joblib",
+    "train_samples": 28480,
+    "val_samples": 6462,
+    "features_count": 339,
+    "val_accuracy": 0.3833,
+    "val_macro_f1": 0.4181,
+    "val_log_loss": 2.7653,
+    "duration_seconds": 134.8882
+}

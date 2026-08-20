@@ -19,12 +19,27 @@
                 "val_accuracy": 1.0
             },
             {
+                "name": "lightgbm",
+                "val_macro_f1": 1.0,
+                "val_accuracy": 1.0
+            },
+            {
+                "name": "dqn",
+                "val_macro_f1": 0.4181,
+                "val_accuracy": 0.3833
+            },
+            {
+                "name": "ppo",
+                "val_macro_f1": 0.3929,
+                "val_accuracy": 0.5119
+            },
+            {
                 "name": "logistic_regression",
-                "val_macro_f1": 0.26,
-                "val_accuracy": 0.3391
+                "val_macro_f1": 0.3805,
+                "val_accuracy": 0.448
             }
         ]
     },
-    "total_models_trained": 3,
-    "duration_seconds": 65.7755
+    "total_models_trained": 6,
+    "duration_seconds": 256.6939
 }

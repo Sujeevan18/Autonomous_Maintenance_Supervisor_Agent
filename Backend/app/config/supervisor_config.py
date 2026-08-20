@@ -824,6 +824,47 @@ class SupervisorConfig:
     lightgbm_reg_lambda: float = 1.0
 
     # -------------------------------------------------------------------------
+    # Reinforcement Learning (PPO & DQN) Parameters
+    # -------------------------------------------------------------------------
+
+    rl_epochs: int = 50
+    rl_batch_size: int = 64
+    rl_gamma: float = 0.99
+    rl_learning_rate: float = 3e-4
+
+    # PPO Parameters
+    ppo_clip_ratio: float = 0.2
+    ppo_gae_lambda: float = 0.95
+    ppo_entropy_coef: float = 0.01
+    ppo_value_coef: float = 0.5
+    ppo_update_epochs: int = 5
+
+    # DQN Parameters
+    dqn_buffer_size: int = 10_000
+    dqn_epsilon_start: float = 1.0
+    dqn_epsilon_min: float = 0.05
+    dqn_epsilon_decay: float = 0.995
+    dqn_target_update_freq: int = 10
+
+    # Reward Function Costs (in currency / penalty units)
+    cost_unplanned_failure: float = 5000.0
+    cost_immediate_maintenance: float = 1200.0
+    cost_scheduled_maintenance: float = 500.0
+    cost_inspection: float = 150.0
+    cost_monitoring: float = 30.0
+    cost_continue_operation: float = 0.0
+
+    # -------------------------------------------------------------------------
+    # Federated Learning Parameters
+    # -------------------------------------------------------------------------
+
+    fl_num_clients: int = 4
+    fl_num_rounds: int = 5
+    fl_local_epochs: int = 3
+    fl_fraction_clients: float = 1.0
+
+
+    # -------------------------------------------------------------------------
     # Processing
     # -------------------------------------------------------------------------
 

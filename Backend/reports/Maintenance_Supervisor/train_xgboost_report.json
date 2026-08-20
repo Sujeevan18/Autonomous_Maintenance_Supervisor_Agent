@@ -8,5 +8,5 @@
     "val_accuracy": 1.0,
     "val_macro_f1": 1.0,
     "val_log_loss": 3.9161,
-    "duration_seconds": 28.9747
+    "duration_seconds": 19.9069
 }
