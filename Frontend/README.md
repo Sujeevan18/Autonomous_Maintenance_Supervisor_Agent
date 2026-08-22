@@ -7,3 +7,6 @@ This folder contains the requested React + TypeScript + Vite structure for the p
 1. `cd Frontend`
 2. `npm install`
 3. `npm run dev`
+
+
+python -m app.Supervisor_main --mode service --port 8000

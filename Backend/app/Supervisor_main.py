@@ -90,7 +90,7 @@ def run_pipeline_mode(mode: str, extra_args: argparse.Namespace) -> int:
             import uvicorn
             port = getattr(extra_args, "port", 8000)
             logger.info("Starting FastAPI server on http://0.0.0.0:%d...", port)
-            uvicorn.run("app.services.Maintenance_Supervisor.service.api_routes:router", host="0.0.0.0", port=port, reload=False)
+            uvicorn.run("app.main:app", host="0.0.0.0", port=port, reload=False)
             return 0
         except ImportError:
             logger.error("uvicorn package is not installed. Install with 'pip install uvicorn'.")

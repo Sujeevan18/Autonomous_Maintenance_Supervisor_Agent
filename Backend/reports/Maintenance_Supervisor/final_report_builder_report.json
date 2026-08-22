@@ -37,7 +37,7 @@
             "preventive_maintenance_tp": 12000.0,
             "routine_inspection": 1500.0
         },
-        "duration_seconds": 0.4263
+        "duration_seconds": 0.4009
     },
     "conformal_prediction": {
         "status": "success",
@@ -46,7 +46,7 @@
         "calibrated_q_alpha_cycles": 5.2,
         "total_test_samples": 5521,
         "manifest_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\conformal_rul_bounds.json",
-        "duration_seconds": 1.0126
+        "duration_seconds": 0.8265
     },
     "counterfactual_scenario": {
         "original_rul": 24.0,
@@ -60,5 +60,5 @@
         "actionable_statement": "If flight operations reduce HPC cruise pressure by 4.2% (thrust adjustment -3.0%), predicted RUL increases from 24.0 to 38.0 cycles (30-day failure risk drops from 89% to 48%), allowing maintenance to be safely rescheduled from schedule maintenance to schedule inspection."
     },
     "final_report_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\artifacts\\Maintenance_Supervisor\\FINAL_SUPERVISOR_RESEARCH_REPORT.md",
-    "duration_seconds": 1.5146
+    "duration_seconds": 1.2727
 }

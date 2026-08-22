@@ -25,21 +25,21 @@
             },
             {
                 "name": "dqn",
-                "val_macro_f1": 0.4181,
-                "val_accuracy": 0.3833
-            },
-            {
-                "name": "ppo",
-                "val_macro_f1": 0.3929,
-                "val_accuracy": 0.5119
+                "val_macro_f1": 0.5452,
+                "val_accuracy": 0.4983
             },
             {
                 "name": "logistic_regression",
-                "val_macro_f1": 0.3805,
-                "val_accuracy": 0.448
+                "val_macro_f1": 0.26,
+                "val_accuracy": 0.3391
+            },
+            {
+                "name": "ppo",
+                "val_macro_f1": 0.2007,
+                "val_accuracy": 0.334
             }
         ]
     },
     "total_models_trained": 6,
-    "duration_seconds": 256.6939
+    "duration_seconds": 187.8077
 }

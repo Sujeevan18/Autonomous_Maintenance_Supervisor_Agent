@@ -19,6 +19,17 @@ pydantic>=2.6
 python-multipart>=0.0.9
 
 # ---------------------------------------------------------------------------
+# Supervisor model backends (REQUIRED — imported unconditionally by
+# app/services/Maintenance_Supervisor/models/model_registry.py, which is
+# imported by decision_fusion_engine.py -> supervisor_service.py -> api_routes.py.
+# Without these, `--mode train`, `--mode infer`, and `--mode service` all fail
+# at import time even if you never intend to use the XGBoost/LightGBM/RL models.
+# ---------------------------------------------------------------------------
+xgboost>=2.0             # models/xgboost_supervisor.py
+lightgbm>=4.3             # models/lightgbm_supervisor.py
+torch>=2.2                # models/dqn_supervisor.py, models/ppo_supervisor.py, federated/federated_supervisor.py
+
+# ---------------------------------------------------------------------------
 # Optional deep-learning extras (lazy-imported).
 # The package runs end-to-end on the RandomForest / IsolationForest path
 # WITHOUT these. Install them to activate the LSTM twin, LSTM autoencoder and

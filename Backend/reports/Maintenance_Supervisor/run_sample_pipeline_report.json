@@ -5,7 +5,7 @@
         "output_path": "C:\\Users\\yogar\\OneDrive\\Desktop\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Aircraft_Predictive_Maintainance_System-Maintainance_Supervisor\\Backend\\data\\Maintenance_Supervisor\\sample\\supervisor_sample_dataset.csv",
         "total_rows": 40463,
         "total_engines": 200,
-        "duration_seconds": 0.6076
+        "duration_seconds": 0.7216
     },
     "validation_result": {
         "is_valid": true,
@@ -14,7 +14,7 @@
         "error_count": 0,
         "warning_count": 0,
         "issues": [],
-        "duration_seconds": 0.0218
+        "duration_seconds": 0.0266
     },
-    "duration_seconds": 2.4014
+    "duration_seconds": 3.8271
 }

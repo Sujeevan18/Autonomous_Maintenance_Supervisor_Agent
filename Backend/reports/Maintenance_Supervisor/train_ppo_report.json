@@ -5,8 +5,8 @@
     "train_samples": 28480,
     "val_samples": 6462,
     "features_count": 339,
-    "val_accuracy": 0.0627,
-    "val_macro_f1": 0.1076,
-    "val_log_loss": 3.0159,
-    "duration_seconds": 15.1828
+    "val_accuracy": 0.334,
+    "val_macro_f1": 0.2007,
+    "val_log_loss": 1.9081,
+    "duration_seconds": 11.7629
 }
