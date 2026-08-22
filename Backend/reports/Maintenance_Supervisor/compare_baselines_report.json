@@ -45,12 +45,12 @@
         },
         {
             "model": "Champion Supervisor Agent",
-            "accuracy": 0.0567,
-            "macro_f1": 0.0215,
-            "false_critical_rate": 1.0,
+            "accuracy": 0.8087,
+            "macro_f1": 0.5669,
+            "false_critical_rate": 0.1194,
             "missed_critical_rate": 0.0,
-            "cost_penalty": 40486.0
+            "cost_penalty": 2552.0
         }
     ],
-    "duration_seconds": 1.8471
+    "duration_seconds": 2.0473
 }

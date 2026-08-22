@@ -7,4 +7,4 @@
 | RUL-Only Baseline | 0.0567 | 0.0215 | 1.0000 | 0.0000 | $40,486.00 |
 | Risk-Only Baseline | 0.6937 | 0.3941 | 0.1231 | 0.0000 | $4,070.00 |
 | Anomaly-Only Baseline | 0.6838 | 0.3610 | 0.2078 | 0.0000 | $5,228.00 |
-| Champion Supervisor Agent | 0.0567 | 0.0215 | 1.0000 | 0.0000 | $40,486.00 |
+| Champion Supervisor Agent | 0.8087 | 0.5669 | 0.1194 | 0.0000 | $2,552.00 |

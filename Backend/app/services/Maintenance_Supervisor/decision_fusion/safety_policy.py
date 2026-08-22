@@ -68,10 +68,26 @@ class SupervisorSafetyPolicy:
         decisions_arr = np.array([str(d).strip().lower() for d in candidate_decisions])
         n_samples = len(decisions_arr)
 
-        rul = df_features.get("predicted_rul", pd.Series(999.0, index=df_features.index)).values
-        r10 = df_features.get("risk_10", pd.Series(0.0, index=df_features.index)).values
-        r30 = df_features.get("risk_30", pd.Series(0.0, index=df_features.index)).values
+        rul_raw = df_features.get("predicted_rul", pd.Series(999.0, index=df_features.index)).values
+        r10_raw = df_features.get("risk_10", pd.Series(0.0, index=df_features.index)).values
+        r30_raw = df_features.get("risk_30", pd.Series(0.0, index=df_features.index)).values
         anom_sev = df_features.get("anomaly_severity", pd.Series("none", index=df_features.index)).astype(str).str.lower().values
+
+        # Detect if features are standardized (max RUL < 15.0) and unscale for physical safety checks
+        if len(rul_raw) > 0 and np.nanmax(rul_raw) < 15.0:
+            rul = rul_raw * 101.69 + 99.32
+        else:
+            rul = rul_raw
+
+        if len(r10_raw) > 0 and np.nanmax(r10_raw) > 2.0:
+            r10 = np.clip((r10_raw - 0.003) / 1.14, 0.0, 1.0)
+        else:
+            r10 = r10_raw
+
+        if len(r30_raw) > 0 and np.nanmax(r30_raw) > 2.0:
+            r30 = np.clip((r30_raw - 0.003) / 1.14, 0.0, 1.0)
+        else:
+            r30 = r30_raw
 
         final_decisions = decisions_arr.copy()
         override_flags = np.zeros(n_samples, dtype=bool)
@@ -105,6 +121,7 @@ class SupervisorSafetyPolicy:
                 if target_sev < 3:
                     target_sev = 3
                     reasons.append(f"Risk_30 >= {self.cfg.maintenance_risk_30_threshold}")
+
 
             if target_sev != curr_sev:
                 final_decisions[i] = SEVERITY_TO_DECISION.get(target_sev, "immediate_maintenance")
