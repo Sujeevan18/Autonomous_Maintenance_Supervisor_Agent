@@ -129,7 +129,28 @@ def run_master_training_pipeline() -> dict:
     logger.info("Selected Champion Model: '%s' (Val Macro F1: %.4f, Val Accuracy: %.4f)",
                 champion["model_name"], champion["val_macro_f1"], champion["val_accuracy"])
 
+    # Also copy all trained model artifacts to Backend/models/Maintenance_Supervisor/ as .joblib and .pkl
+    import shutil
+    from app.config.supervisor_config import MODEL_ROOT
+    MODEL_ROOT.mkdir(parents=True, exist_ok=True)
+
+    for r in valid_results:
+        src = Path(r["model_path"])
+        if src.exists():
+            # Copy to Backend/models/Maintenance_Supervisor/<name>_supervisor.pkl and .joblib
+            dst_joblib = MODEL_ROOT / f"{r['model_name']}_supervisor.joblib"
+            dst_pkl = MODEL_ROOT / f"{r['model_name']}_supervisor.pkl"
+            shutil.copy2(src, dst_joblib)
+            shutil.copy2(src, dst_pkl)
+
+    # Copy champion model to selected_supervisor_model.joblib and .pkl
+    champ_src = Path(champion["model_path"])
+    if champ_src.exists():
+        shutil.copy2(champ_src, MODEL_ROOT / "selected_supervisor_model.joblib")
+        shutil.copy2(champ_src, MODEL_ROOT / "selected_supervisor_model.pkl")
+
     duration = time.perf_counter() - start_time
+
 
     champion_manifest = {
         "champion_model_name": champion["model_name"],
